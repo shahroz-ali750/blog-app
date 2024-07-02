@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function () {
   return (
-    <nav class="navbar navbar-expand-lg background ">
+    <nav class="navbar navbar-expand-lg background">
       <div class="container-fluid">
         <Link class="navbar-brand text-white fw-bold" to="/">
           Blog App
@@ -18,27 +18,46 @@ export default function () {
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav ">
-            <li class="nav-item text-white">
-              <Link class="nav-link active text-white" aria-current="page" to="/">
-                Home
-              </Link>
-            </li>
-            <li class="nav-item ">
-              <Link class="nav-link text-white" to="create">
-                Create
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link text-white " to="signin">
-                Sign In
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link text-white" to ='register'>Register</Link>
-            </li>
-          </ul>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-between"
+          id="navbarNav">
+          <div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <Link
+                  class="nav-link active bg-light text-primary ms-2 rounded rounded-1"
+                  aria-current="page"
+                  to="/">
+                  Home
+                </Link>
+              </li>
+              <li class="nav-item ">
+                <Link
+                  class="nav-link bg-light text-primary ms-5 rounded rounded-1"
+                  to="create">
+                  Create
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="">
+            <ul className="navbar-nav">
+              <li class="nav-item me-5">
+                <Link
+                  class="nav-link bg-light text-primary rounded rounded-1"
+                  to="signin">
+                  Sign In
+                </Link>
+              </li>
+              <li class="nav-item me-2">
+                <Link
+                  class="nav-link bg-light text-primary rounded rounded-1"
+                  to="register">
+                  Register
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
